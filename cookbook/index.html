@@ -1258,7 +1258,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 <script type="text/babel">
 const { useState, useEffect, useCallback, useRef } = React;
 
-const API = 'http://localhost:8742/api';
+const API = window.location.origin + '/api';
 async function api(path, opts = {}) {
   const res = await fetch(`${API}${path}`, {
     headers: { 'Content-Type': 'application/json' },
